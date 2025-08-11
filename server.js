@@ -55,9 +55,9 @@ async function checkPage(browser, url) {
 
     if (foundTimes.length > 0) {
       await notifyTelegram(`🚀 Showtimes available for:\n${url}\nTimes: ${foundTimes.join(', ')}`);
-    } else {
-      await notifyTelegram(`❌ No FDFS times yet for ${url}`);
-    }
+    }//  else {
+    //   await notifyTelegram(`❌ No FDFS times yet for ${url}`);
+    // }
   } catch (e) {
     console.error(`Error checking ${url}`, e);
   } finally {
