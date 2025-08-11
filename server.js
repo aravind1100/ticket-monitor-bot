@@ -67,7 +67,10 @@ async function checkPage(browser, url) {
 
 // Main loop
 (async () => {
-  const browser = await puppeteer.launch({ headless: true, args: ['--no-sandbox'] });
+ const browser = await puppeteer.launch({
+  headless: true,
+  args: ['--no-sandbox', '--disable-setuid-sandbox']
+});
 
   await notifyTelegram("✅ Ticket monitor started — Telegram bot is working!");
 
